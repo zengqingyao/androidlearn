@@ -133,7 +133,7 @@ public class MainBindingActivity extends AppCompatActivity {
 
         Gson gson = new Gson();
         String sJson = gson.toJson(arrayList);
-        Log.e(TAG, "onCreate: "+sJson);
+        Log.e(TAG, "onCreate:gson变量转为json字符串 "+sJson);
 
         Type type = new TypeToken<List<SerializableTest>>() {}.getType();
 
