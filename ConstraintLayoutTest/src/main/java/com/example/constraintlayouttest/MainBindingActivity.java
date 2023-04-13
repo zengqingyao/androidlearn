@@ -44,7 +44,7 @@ public class MainBindingActivity extends AppCompatActivity {
 
         // 测试这里是bugfix分支修改的代码
         // 测试dev分支暂时保存修改 搁置更改
-        // 使用dev创建子分支，然后修改
+        // 使用dev创建子分支，然后修改，修改
 
         //==================1. 第一种方法============================================
         mMyViewModel = new ViewModelProvider(this).get(MyViewModel.class);
