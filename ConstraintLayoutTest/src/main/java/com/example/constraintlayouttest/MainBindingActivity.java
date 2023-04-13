@@ -42,6 +42,7 @@ public class MainBindingActivity extends AppCompatActivity {
         //==================1. 第一种方法============================================
         mMyViewModel = new ViewModelProvider(this).get(MyViewModel.class);
 
+
         // 设置监听 livedata ，值改变的时候会回调 onChanged
         /**
          * 第一种方法 界面控制怎么显示数值的改变
