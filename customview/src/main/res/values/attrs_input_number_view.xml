@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 输入按键的属性，比如最大值和最小值，还有步长 -->
+    <declare-styleable name="InputNumberView" >
+        <attr name="max" format="integer"/>
+        <attr name="min" format="integer"/>
+        <attr name="step" format="integer"/>
+        <attr name="defaultValue" format="integer"/>
+        <attr name="disable" format="boolean"/>
+        <attr name="btnBackground" format="reference"/>
+        <attr name="valuesSize" format="dimension"/>
+    </declare-styleable>
+</resources>

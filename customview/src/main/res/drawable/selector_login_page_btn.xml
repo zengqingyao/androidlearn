@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 当按钮是press按下状态，drawable为shape_num_btn_bg_left_press -->
+    <item android:state_pressed="true" android:drawable="@drawable/shape_login_page_btn_press"/>
+
+    <!-- false状态下的背景图 -->
+    <item android:state_enabled="false" android:drawable="@drawable/shape_login_page_btn_press"/>
+
+    <!-- 默认的配色方案   -->
+    <item android:drawable="@drawable/shape_login_page_btn_normal"/>
+
+</selector>

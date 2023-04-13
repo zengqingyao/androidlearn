@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".RetrofitTest">
+
+    <Button
+            android:onClick="getText_Retrofit"
+            android:text="getText_Retrofit-@空注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:onClick="getWithParams_Retrofit"
+            android:text="getWithParams_Retrofit-@Query注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="getWithParamsMap_Retrofit"
+            android:text="getWithParamsMap_Retrofit-@QueryMap注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postWithParams_Retrofit"
+            android:text="postWithParams_Retrofit-@Query注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postWithUrl_Retrofit"
+            android:text="postWithUrl_Retrofit-@Url注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postCommentWithBody_Retrofit"
+            android:text="postComment_Retrofit-@Body注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postUploadFile_Retrofit"
+            android:text="postUploadFile_Retrofit-@Part注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postUploadFileS_Retrofit"
+            android:text="uploadFileS_Retrofit-@Part注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postUploadFileWithParams_Retrofit"
+            android:text="postUploadFileWithParams_Retrofit-@PartMap注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="postLoginMap_Retrofit"
+            android:text="postLoginMap_Retrofit-@Field注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:onClick="getDownloadFile_Retrofit"
+            android:text="getDownloadFile_Retrofit-@Url注解"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

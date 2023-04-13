@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:text="TextView"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/tv_person_view"/>
+    <Button
+            android:text="开启连接AIDL服务"
+            android:onClick="startAidlPersonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button5"/>
+    <Button
+            android:text="停止连接AIDL服务"
+            android:onClick="stopAidlPersonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button9"/>
+    <Button
+            android:text="绑定AIDL服务"
+            android:onClick="bindAidlPersonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button10"/>
+    <Button
+            android:text="解绑AIDL服务"
+            android:textAllCaps="false"
+            android:onClick="unbindAidlPersonService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button11"/>
+    <Button
+            android:text="调用aidl方法向远程服务addPerson"
+            android:textAllCaps="false"
+            android:onClick="callRemoteAddPersonMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button12"/>
+    <Button
+            android:text="调用aidl方法向远程服务getPerson"
+            android:textAllCaps="false"
+            android:onClick="callRemoteGetPersonMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button13"/>
+    <Button
+            android:text="button"
+            android:onClick="startAidlPersonTest"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button14"/>
+    <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button15"/>
+    <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button16"/>
+    <Button
+            android:text="Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/button17"/>
+</LinearLayout>

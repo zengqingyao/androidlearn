@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- clipChildren 是否限制子View在其范围内，其值设置为false后那么当子控件的高度高于父控件时也会完全显示,而不会被压缩-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:clipChildren="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <!--view pager,我用的是androidx的，不是以前的v4包-->
+    <!--com.zengqy.customview.customview.SobViewPager 实现了自动轮播 ViewPage-->
+    <com.zengqy.customview.customview.SobViewPager
+            android:id="@+id/content_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="40dp" />
+
+    <!--标题控件-->
+    <TextView
+            android:id="@+id/content_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99ffffff"
+            android:paddingLeft="20dp"
+            android:paddingTop="2dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="2dp"
+            android:text="这是标题内容..."
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+    <!--用来放圆点-->
+    <LinearLayout
+            android:id="@+id/content_point_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal" />
+
+
+</RelativeLayout>

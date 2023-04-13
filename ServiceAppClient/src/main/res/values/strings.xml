@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AppClient</string>
+    <string name="textDefalutValue">这是默认值</string>
+    <string name="btnStartSevrice">启动服务</string>
+    <string name="btnStopSevrice">关闭服务</string>
+    <string name="btnBindSevrice">绑定服务</string>
+    <string name="btnUnbindSevrice">取绑服务</string>
+</resources>
