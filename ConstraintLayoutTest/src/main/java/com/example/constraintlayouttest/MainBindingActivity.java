@@ -48,6 +48,7 @@ public class MainBindingActivity extends AppCompatActivity {
         // dev 分支修改，再次修改
         // 1. 本地修改dev分支
         // 2. 远程修改仓库里面的代码
+        // 3. 本地修改了dev分支
 
         //==================1. 第一种方法============================================
         mMyViewModel = new ViewModelProvider(this).get(MyViewModel.class);
