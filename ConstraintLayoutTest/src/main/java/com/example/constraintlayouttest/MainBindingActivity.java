@@ -21,6 +21,9 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * lifecyle的使用
+ */
 public class MainBindingActivity extends AppCompatActivity {
 
     public static String TAG = "lifecycle_MainBindingActivity";
