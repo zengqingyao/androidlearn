@@ -42,6 +42,8 @@ public class MainBindingActivity extends AppCompatActivity {
         mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main_binding);
 
 
+        // 测试这里是bugfix分支修改的代码
+
         //==================1. 第一种方法============================================
         mMyViewModel = new ViewModelProvider(this).get(MyViewModel.class);
 
