@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 
 public class DatebaseHelper extends SQLiteOpenHelper {
 
-    private static final String TAG = "DatebaseHelper";
+    private static final String TAG = "SQL_DatebaseHelper";
     private String sql;
 
     public DatebaseHelper(@Nullable Context context) {

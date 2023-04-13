@@ -14,7 +14,7 @@ import android.util.Log;
  */
 public class Dao {
 
-    private static final String TAG = "Dao";
+    private static final String TAG = "SQL_Dao";
 
     private final DatebaseHelper mDatebaseHelper;
 

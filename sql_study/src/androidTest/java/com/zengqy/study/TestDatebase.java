@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 @RunWith(AndroidJUnit4.class)
 public class TestDatebase {
 
-    private static final String TAG = "TestDatebase";
+    private static final String TAG = "SQL_TestDatebase";
 
     @Test
     public void test_insert(){
