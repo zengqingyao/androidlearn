@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.componentstudy">
-
     <!-- 申请对所有包可见 -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/> <!-- <queries> -->
     <!-- <package android:name="com.alibaba.alipay"/> -->
@@ -11,11 +10,17 @@
     <!-- </intent> -->
     <!-- </queries> -->
     <!-- 打电话的权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE"/> <!-- 电量广播权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- 电量广播权限 -->
     <uses-permission
             android:name="android.permission.BATTERY_STATS"
-            tools:ignore="ProtectedPermissions"/> <!-- 开机广播权限 -->
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/> <!-- 自定义权限 -->
+            tools:ignore="ProtectedPermissions"/>
+
+    <!-- 开机广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <!-- 自定义权限 -->
     <permission android:name="com.example.componentstudy.activitys.ORDER_PERMISSION"/>
 
     <application
@@ -25,6 +30,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.Pay_aidl_service">
+
+        <activity android:name=".activitys.TwoRunModeActivity"
+                  android:taskAffinity="com.abc.zengqy"
+            android:launchMode="singleInstance">
+        </activity>
+
+        <activity android:name=".activitys.OneRunModeActivity"
+            android:launchMode="standard">
+        </activity>
+
         <service
                 android:name=".services.MessengerService"
                 android:enabled="true"
@@ -60,7 +75,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
-        </receiver> <!-- android8.0后无法通过静态注册来接收软件安装和卸载广播 -->
+        </receiver>
+
+        <!-- android8.0后无法通过静态注册来接收软件安装和卸载广播 -->
         <receiver android:name=".broadcastReceivers.AppStateChangeReceiver">
             <intent-filter>
 
@@ -76,7 +93,9 @@
                 <!-- 数据约束 -->
                 <data android:scheme="package"/>
             </intent-filter>
-        </receiver> <!-- 自定义广播 -->
+        </receiver>
+
+        <!-- 自定义广播 -->
         <receiver android:name=".broadcastReceivers.CustomReceiver">
             <intent-filter>
                 <action android:name="com.example.componentstudy.activitys.SEND_MSG"/>
@@ -86,7 +105,9 @@
             <intent-filter android:priority="1000">
                 <action android:name="com.example.componentstudy.activitys.ORDER_SEND_MSG"/>
             </intent-filter>
-        </receiver> <!-- 低优先级广播 -->
+        </receiver>
+
+        <!-- 低优先级广播 -->
         <receiver android:name=".broadcastReceivers.LowPriorityCustomReceiver">
             <intent-filter android:priority="-200">
                 <action android:name="com.example.componentstudy.activitys.ORDER_SEND_MSG"/>

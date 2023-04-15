@@ -23,7 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/button7"/>
     <Button
-            android:text="Button"
+            android:text="测试activity启动模式"
+            android:onClick="startRunMode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/button8"/>
 

@@ -86,8 +86,9 @@ public class Dao {
 
         while (cursor.moveToNext()){
             int index = cursor.getColumnIndex("name");
+            int index1 = cursor.getColumnIndex("age");
             String name = cursor.getString(index);
-            Log.e(TAG, "name = "+name );
+            Log.e(TAG, "name:"+name +"  age:"+cursor.getInt(index1));
         }
 
         cursor.close();

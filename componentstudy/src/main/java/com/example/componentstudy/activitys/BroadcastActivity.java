@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -54,6 +55,11 @@ public class BroadcastActivity extends AppCompatActivity {
      */
     public void sendCustomBroadcast(View view) {
         String msg = mInputbox.getText().toString().trim();
+        if (TextUtils.isEmpty(msg)) {
+            Toast.makeText(this,"自定义广播的值不能为空！！",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Log.d(TAG, "sendCustomBroadcast: ms: "+msg);
         // 发送广播+内容
         Intent intent = new Intent();
@@ -92,7 +98,11 @@ public class BroadcastActivity extends AppCompatActivity {
         // 发送广播 ，接收器需要相应的权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             sendOrderedBroadcast(intent, null,null,null
-                    ,null, Activity.RESULT_OK,null,bundle);
+                    ,null, Activity.RESULT_OK,"(自定义有序广播11) ",bundle);
+        }
+        else {
+            sendOrderedBroadcast(intent, null, null,
+                    null, Activity.RESULT_OK, "(自定义有序广播4.4) ", bundle);
         }
     }
 

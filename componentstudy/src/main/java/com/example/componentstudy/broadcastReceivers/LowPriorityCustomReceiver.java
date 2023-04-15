@@ -26,7 +26,7 @@ public class LowPriorityCustomReceiver extends BroadcastReceiver {
         Bundle res = getResultExtras(true);
         String content = res.getCharSequence("content").toString();
 
-        Toast.makeText(context,"接收到低优先级自定义有序广播: "+action+" 值:"+stringExtra
+        Toast.makeText(context,"接收到 "+getResultData()+action+" 值:"+stringExtra
                 + "传进来的值："+content,Toast.LENGTH_SHORT).show();
     }
 }

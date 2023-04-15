@@ -97,4 +97,10 @@ public class PayActivity extends Activity {
         }
         finish();
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        Log.d(TAG, "onWindowFocusChanged: "+(hasFocus?"activity有焦点":"activity失去焦点"));
+    }
 }

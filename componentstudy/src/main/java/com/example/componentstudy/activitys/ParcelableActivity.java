@@ -15,6 +15,9 @@ import androidx.core.content.ContextCompat;
 import com.example.componentstudy.R;
 import com.example.componentstudy.pojo.User;
 
+/**
+ * 显式意图 通常用在应用内跳转，隐式意图通常用于打开第三方应用
+ */
 public class ParcelableActivity extends AppCompatActivity {
 
     private static final String TAG = "CMP";
@@ -143,4 +146,11 @@ public class ParcelableActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * 启动模式的学习，自行修改AndroidManifest.xml
+     * @param view
+     */
+    public void startRunMode(View view) {
+        startActivity(new Intent(this,OneRunModeActivity.class));
+    }
 }

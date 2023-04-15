@@ -11,7 +11,7 @@ import android.widget.Toast;
  * @包名: com.example.componentstudy.broadcastReceivers
  * @author: zengqy
  * @DATE: 2022/12/9 15:56
- * @描述: 监听应用的安装与卸载
+ * @描述: 监听应用的安装与卸载  android8.0后无法通过静态注册来接收软件安装和卸载广播
  */
 public class AppStateChangeReceiver extends BroadcastReceiver {
     private static final String TAG = "CMP_AppStateChangeR";

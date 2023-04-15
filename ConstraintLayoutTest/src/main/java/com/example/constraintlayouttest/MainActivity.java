@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     TextView mTextView;
 
 
+    /**
+     * activity第一次创建的时候调用，跟ondestroy对应
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,6 +121,9 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("KEY","value");
     }
 
+    /**
+     * activity可见的时候调用，但没有焦点，不可以进行操作，跟onStop对应
+     */
     @Override
     protected void onStart() {
         super.onStart();
@@ -124,30 +131,45 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onStart: ");
     }
 
+    /**
+     * activity获取到焦点的时候，可以进行交互，跟onPause对应
+     */
     @Override
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume: ");
     }
 
+    /**
+     * 失去焦点的时候，但还是可见的，比如跳转到一个透明的activity的时候就会调用
+     */
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause: ");
     }
 
+    /**
+     * 不可见的时候调用，比如点击home键返回到桌面
+     */
     @Override
     protected void onStop() {
         super.onStop();
         Log.d(TAG, "onStop: ");
     }
 
+    /**
+     * 重新返回的到activity的时候会调用，然后再调用onStart
+     */
     @Override
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "onRestart: ");
     }
 
+    /**
+     * activity被销毁的时候调用
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -35,6 +35,7 @@ public class CustomReceiver extends BroadcastReceiver {
             }
 
             // 可以修改广播的内容
+
             Bundle res = getResultExtras(true);
             String content=null;
             if (res != null) {
@@ -42,8 +43,13 @@ public class CustomReceiver extends BroadcastReceiver {
                 res.putCharSequence("content","我是被修改后的内容");
                 setResultExtras(res);
             }
-            Toast.makeText(context, "接收到自定义有序广播: " + action + " 值:" + stringExtra
+            Toast.makeText(context, "接收到 "+getResultData() + action + " 值:" + stringExtra
                     +" 传进来的值："+content, Toast.LENGTH_SHORT).show();
+
+            if (getResultData() != null) {
+                // 这个值也可以被修改
+                setResultData("低优先级"+getResultData());
+            }
         }
 
     }
