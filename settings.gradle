@@ -2,7 +2,6 @@ rootProject.name = "pay_aidl_service"
 include ':Alipay'
 include ':paytest'
 include ':sql_study'
-include ':contentprovider'
 include ':HttpStudy'
 include ':customview'
 include ':ServiceAppService'

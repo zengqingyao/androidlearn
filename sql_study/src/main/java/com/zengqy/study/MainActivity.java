@@ -21,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "CMP_MainActivity";
 
     public static final String FIELD_USERNAME = "userName";
     public static final String FIELD_PASSWORD = "password";
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ContentResolver contentResolver = getContentResolver();
-        Uri uri = Uri.parse("content://com.zengqy.contentprovider/user");
+        Uri uri = Uri.parse("content://com.example.componentstudy.contentprovider/user");
 
         // 监听数据库的值
         contentResolver.registerContentObserver(uri, true, new ContentObserver(new Handler(Looper.myLooper())) {
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Log.e(TAG, "getRemoteProvide:");
         ContentResolver contentResolver = getContentResolver();
 
-        Uri uri = Uri.parse("content://com.zengqy.contentprovider/user");
+        Uri uri = Uri.parse("content://com.example.componentstudy.contentprovider/user");
 //        Uri uri = Uri.parse("content://sobUserProvide");
         Cursor cursor = contentResolver.query(uri, null, null, null, null);
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     public void insertRemoteProvide(View view) {
         ContentResolver contentResolver = getContentResolver();
 
-        Uri uri = Uri.parse("content://com.zengqy.contentprovider/user");
+        Uri uri = Uri.parse("content://com.example.componentstudy.contentprovider/user");
 
         ContentValues values = new ContentValues();
         values.put(FIELD_AGE, 99);

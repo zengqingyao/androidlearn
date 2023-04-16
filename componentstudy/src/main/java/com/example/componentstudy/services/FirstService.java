@@ -72,7 +72,7 @@ public class FirstService extends Service {
     private void thisIsServiceMethod()
     {
         Log.d(TAG, "thisIsServiceMethod: 服务的内部方法被调用");
-        Toast.makeText(this,"服务的内部方法被调用",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,Thread.currentThread()+" 服务的内部方法被调用",Toast.LENGTH_SHORT).show();
     }
     
 }

@@ -99,7 +99,7 @@ public class ServiceActivity extends AppCompatActivity {
     public void bindService(View view) {
         Log.d(TAG, "绑定服务 bindService: ");
         mIsServiceBinder = bindService(mStartServiceIntent, mServiceConnection, BIND_AUTO_CREATE);
-        mTextView.setText("绑定服务");
+        mTextView.setText("绑定服务，线程名 "+Thread.currentThread());
     }
 
 

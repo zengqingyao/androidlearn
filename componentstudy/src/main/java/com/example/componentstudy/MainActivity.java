@@ -19,7 +19,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "CMP";
+    private static final String TAG = "CMP_";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,5 +115,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startlearnContentProvide(View view) {
+        Log.d(TAG, "startlearnContentProvide: 打开第三方应用");
+        Intent intent = new Intent();
+        intent.setClassName("com.zengqy.study","com.zengqy.study.MainActivity");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

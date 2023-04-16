@@ -61,6 +61,9 @@ public class PayActivity extends Activity {
 
     }
 
+    /**
+     * activity需要绑定到自己的服务程序，去支付
+     */
     private void doBindService() {
         Intent intent = new Intent(this, PayService.class);
         mIsbind = bindService(intent, mServiceConnection, BIND_AUTO_CREATE);

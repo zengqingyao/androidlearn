@@ -121,6 +121,12 @@
                 android:exported="true"
                 android:process=":personaidl">
         </service>
+
+        <provider
+                android:exported="true"
+                android:authorities="com.example.componentstudy.contentprovider;sobUserProvide"
+                android:name=".contentprovide.UserProvide"/>
+
     </application>
 
 </manifest>
